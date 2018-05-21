@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="g67-kh-JjL" customClass="SidebarView" customModule="Pushbud" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PZ-5C-ZQ4">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPs-h9-avD" customClass="AvatarImageView" customModule="Pushbud" customModuleProvider="target">
+                            <rect key="frame" x="111" y="36" width="98" height="98"/>
+                            <color key="backgroundColor" red="0.019607843140000001" green="0.13725490200000001" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="98" id="DW2-tO-LKS"/>
+                                <constraint firstAttribute="height" constant="98" id="tdX-un-nwg"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="targetSize">
+                                    <real key="value" value="96"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUI-8K-R8R">
+                            <rect key="frame" x="88" y="145" width="144" height="32"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.14420902990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="yxd-Z3-07i"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="50" minY="6" maxX="50" maxY="6"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="profileAction" destination="g67-kh-JjL" eventType="touchUpInside" id="Bcb-gp-MQa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFI-sL-ujF">
+                            <rect key="frame" x="118" y="179" width="84" height="32"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="20" minY="6" maxX="20" maxY="6"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="changePasswordAction" destination="g67-kh-JjL" eventType="touchUpInside" id="Yzv-3E-yM6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.019607843140000001" green="0.13725490200000001" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="XPs-h9-avD" firstAttribute="centerX" secondItem="3PZ-5C-ZQ4" secondAttribute="centerX" id="2kj-MW-Ifv"/>
+                        <constraint firstItem="lFI-sL-ujF" firstAttribute="centerX" secondItem="3PZ-5C-ZQ4" secondAttribute="centerX" id="MMO-0y-cpZ"/>
+                        <constraint firstAttribute="height" constant="214" id="Q5c-ef-8la"/>
+                        <constraint firstItem="lFI-sL-ujF" firstAttribute="top" secondItem="nUI-8K-R8R" secondAttribute="bottom" constant="2" id="SwO-di-Khv"/>
+                        <constraint firstItem="nUI-8K-R8R" firstAttribute="top" secondItem="XPs-h9-avD" secondAttribute="bottom" constant="11" id="YOT-S2-etu"/>
+                        <constraint firstItem="nUI-8K-R8R" firstAttribute="centerX" secondItem="3PZ-5C-ZQ4" secondAttribute="centerX" id="ceV-jX-0Ml"/>
+                        <constraint firstItem="XPs-h9-avD" firstAttribute="top" secondItem="3PZ-5C-ZQ4" secondAttribute="top" constant="36" id="f0S-gG-sKf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3PZ-5C-ZQ4" firstAttribute="top" secondItem="g67-kh-JjL" secondAttribute="top" id="0Sh-g2-dQA"/>
+                <constraint firstItem="3PZ-5C-ZQ4" firstAttribute="leading" secondItem="g67-kh-JjL" secondAttribute="leading" id="127-ow-fVx"/>
+                <constraint firstItem="3PZ-5C-ZQ4" firstAttribute="width" secondItem="g67-kh-JjL" secondAttribute="width" id="8C1-NV-jCU"/>
+            </constraints>
+            <connections>
+                <outlet property="btnChangePassword" destination="lFI-sL-ujF" id="hGZ-kx-kHJ"/>
+                <outlet property="btnProfile" destination="nUI-8K-R8R" id="XSW-gD-Knw"/>
+                <outlet property="headerView" destination="3PZ-5C-ZQ4" id="15g-AB-Rk0"/>
+                <outlet property="imgUser" destination="XPs-h9-avD" id="yd1-Ca-8iw"/>
+            </connections>
+        </view>
+    </objects>
+</document>

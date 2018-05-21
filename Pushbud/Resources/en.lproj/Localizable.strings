@@ -1,0 +1,219 @@
+// Common
+Notification.DefaultTitle = "Notification";
+Dialog.MayBeTomorrow = "May be tomorrow";
+Friend = "Venner";
+Cancel = "Cancel";
+Done = "Done";
+Yes = "Yes";
+No = "No";
+Skip = "Skip";
+Logout = "Logout";
+Retry = "Retry";
+Keypad.Done = "Done";
+Save = "Save";
+Post = "Post";
+Private = "Private";
+Public = "Public";
+UnfollowAlert = "Are you sure want to stop following '%@'?";
+
+// Common Error
+Failure = "Failure";
+Error.Unexpected = "An error occurred. Please try again later.";
+Error.NoNetworkTitle = "Network error";
+Error.NoNetworkTip = "Please check your internet connection and try again.";
+
+// Sidebar Menu
+Sidebar.LogoutAlert = "Are you sure you want to log out?";
+Sidebar.Friends = "Friends";
+Sidebar.Tags = "My Tags";
+Sidebar.Events = "My events";
+Sidebar.Pictures = "Pictures nearby";
+Sidebar.EditProfile = "Edit Profile";
+Sidebar.Settings = "Settings";
+
+// Date & Time
+Date.JustNow = "Just Now";
+Date.MinutesAgo = "%d min(s) ago";
+Date.HourAgo = "an hour ago";
+Date.HoursAgo = "%d hour(s) ago";
+Date.YesterdayAt = "'Yesterday at 'h:mm a";
+Date.ThisYearAt = "MMM d' at 'h:mm a";
+Date.PastYearAt = "MMM d', 'yyyy' at 'h:mm a";
+
+// LoginViewController
+Authentication.LoginTitle = "SIGN IN";
+Authentication.LoginButton = "Sign-In";
+Authentication.SignupTitle = "JOIN";
+Authentication.SignupButton = "Create Account";
+Authentication.Username = "Username";
+Authentication.Password = "Password";
+Authentication.RepeatPassword = "Confirm password";
+Authentication.LoginSeparatorTip = "Or sign in using Pushbud account";
+Authentication.SignupSeparatorTip = "Or sign up using email";
+
+// LoginViewController errors
+Error.UsernameEmpty = "Username is required";
+Error.UsernameInvalid = "Invalid username";
+Error.UsernameTooShort = "Username must be over 4 characters";
+Error.UsernameInvalidCharacter = "Only a-z 0-9 or .-_ is valid in the username";
+Error.PasswordEmpty = "Please enter password";
+Error.PasswordTooShort = "Password cannot be less than 4 charaters";
+Error.PasswordMismatch = "Password and confirm password do not match";
+Error.LoginFailedTitle = "Could not sign you in";
+Error.LoginFailedTip = "Check if you typed your username and/or password correctly";
+Error.SignupFailedTitle = "Could not register your user";
+Error.SignupFailedTip = "An error occurred. Please try again later";
+
+// MapViewController
+Map.EmptyTip = "No events within map area\nHey, but checkout these popular tags!";
+Map.UserLocationUnavailableMessage = "To show and follow your location, location services needs to be turned on.\nAlso make sure PushBud is authorized to use your location.";
+
+LocationServices.Disabled.Title = "Where are you?";
+LocationServices.Disabled.Tip = "PushBud requires location services to be turned on, so we can recommend nearby events.";
+LocationServices.Disabled.Button = "Enable Location Services";
+
+LocationServices.Unauthorized.Title = "Where are you?";
+LocationServices.Unauthorized.Tip = "Authorize us to use your location, so we can recommend nearby events.";
+LocationServices.Unauthorized.Button = "Authorize Us";
+
+LocationServices.Disabled.Toast.Title = "Location Services";
+LocationServices.Disabled.Toast.Tip = "PushBud requires location services to be turned on.\nGo to Settings → Privacy → Location Services and turn location services on.";
+
+LocationServices.Unauthorized.Toast.Title = "Location Services";
+LocationServices.Unauthorized.Toast.Tip = "PushBud requires to be authorized to use your location.\nGo to Settings → PushBud → Location and select \"Always\".";
+
+// TrackingViewController
+Tracking.PushInRadius = "Notify me when in radius";
+Tracking.ExpiryTitle = "Track Until";
+Tracking.ExpiresOnIntersect = "Invalidates on Intersection";
+Tracking.RequestTitle = "Tracking Request";
+Tracking.Request = "Request Tracking Permission";
+
+Tracking.Expiry.End = "Expired";
+Tracking.Expiry.Second = "%01ds left";
+Tracking.Expiry.Minute = "%01dm left";
+Tracking.Expiry.Hours = "%01dh left";
+Tracking.Expiry.Day = "%01dd left";
+Tracking.Expiry.DayHours = "%1$dd %2$dh left";
+
+Tracking.Decline = "Are you sure want to decline the tracking request?";
+Tracking.Remove = "Are you sure want to remove?";
+Tracking.Delete = "Delete";
+Tracking.View = "View";
+
+TrackingStatus.Active = "Active";
+TrackingStatus.Awaiting = "Awaiting";
+TrackingStatus.Invitation = "Invitation";
+
+// UserViewController
+User.Follow = "Invite";
+User.Invited = "Invited";
+User.Following = "Following";
+
+User.PostsTitle = "POSTS";
+User.TagsTitle = "TAGS";
+User.FriendsTitle = "FRIENDS";
+
+// FeedsViewController
+Feed.EmptyTip = "No events, but check the tags below";
+Feed.EmptyButtonTitle = "Search for Friends";
+
+Feed.Report = "Your feed report submitted.";
+Feed.UnReport = "Removed your feed report.";
+
+Feed.FilterMap = "MAP";
+Feed.FilterNearby = "NEAR BY";
+Feed.FilterGlobal = "GLOBAL";
+Feed.FilterThisWeekend = "THIS WEEKEND";
+Feed.FilterFriends = "FRIENDS";
+Feed.FilterOwnEvents = "MY EVENTS";
+
+// CommentsViewController
+Comments.Placeholder = "Enter your comment...";
+Comments.EmptyTip = "Be the first to comment.";
+
+// FriendshipMenu
+Friendship.Profile = "View Profile";
+Friendship.Settings = "Push Settings";
+Friendship.Delete = "Delete";
+Friendship.Tracking = "Tracking";
+Friendship.StopNotification = "Disable";
+
+// FriendsViewController
+Friends.SearchPlaceholder = "Search people...";
+Friends.DeclineAlert = "Are you sure want to decline?";
+Friends.Radius = "Radius (%dkm)";
+
+CHANGE_RADIUS_ERROR_TITLE = "Could not store new radius";
+CHANGE_RADIUS_ERROR = "There was an error while updating your radius. Please try again later";
+
+TRACKING_SAVE_ERROR_TITLE = "Failure tracking";
+TRACKING_SAVE_ERROR = "There was an error while saving tracking data. Please try again later";
+
+// TagsViewController
+Tags.SearchPlaceholder = "Search tags...";
+
+// Editor
+Editor.Title = "Details";
+Editor.Location = "Location";
+Editor.Tags = "Tags";
+Editor.SlugPlaceholder = "Enter description...";
+Editor.MapLocationTip = "Tap and hold to drag the marker.\nLong press the place to quickly move the marker.";
+Editor.WaitWhileSaving = "Please wait while the post is being saved.";
+EditorMap.SearchPlaceholder = "Search nearby place...";
+Editor.VisibilityTitle = "Visibility";
+
+// EditorViewController errors
+Error.EventCreateFailTitle = "Failure";
+Error.EventCreateFailTip = "Cannot save because of an server error.";
+Error.PhotoUploadFailed = "An error has occurred during picture upload, please try again.";
+
+// Profile
+Profile.Own.Title = "My profile";
+Profile.Save = "Save changes";
+Profile.AcceptInvitation = "Accept Invitation";
+Profile.CameraPhoto = "Take a photo";
+Profile.LibraryPhoto = "Photo from library";
+Profile.RemovePhoto = "Remove profile picture";
+Profile.NamePlaceholder = "Name";
+Profile.EmailPlaceholder = "Email";
+Profile.ImageUploadError = "There was an error while uploading picture";
+
+Profile.Visibility = "Profile Visibility";
+Profile.VisibilityPrivate = "Profile can be seen by friends only.";
+Profile.VisibilityPublic = "Profile is available to be seen by anyone.";
+
+// Passwowrd
+ChangePassword.Title = "Change Password";
+ChangePassword.CurrentPasswordTitle = "Current password";
+ChangePassword.NewPasswordTitle = "New password";
+ChangePassword.RepeatPasswordTitle = "Repeat password";
+ChangePassword.ShowPassword = "Show Password";
+ChangePassword.HidePassword = "Hide Password";
+
+// NotifyViewController
+Nofity.EmptyTip = "You are all caught up!";
+
+// API Errors
+APIError.LoginExist = "Username \"%@\" is taken, choose a different username";
+
+
+// Push localization keys.
+FRXT = "Friend Request";
+//FRXB = "%1$@ sent you a friend request";
+FRXB = "%@ sent you a friend request";
+FRAT = "Accepted Friend Request";
+FRAB = "%@ accepted your friend request";
+NET  = "New event from %@"; // New event title
+NEB  = "%@"; // The new event body
+TRXT = "Tracking request";
+TRXB = "%@ sent you a position tracking request";
+TRAT = "Position tracking request";
+TRAB = "%@ accepted your position tracking request";
+TRIT = "%@ is close";
+TRIB = "%@ is under %@m away from you";
+TRDT = "Position tracking request";
+TRDB = "%@ rejected your position tracking request";
+
+NCT = "%@ commented your event";
+NCB = "%@";

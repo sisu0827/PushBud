@@ -1,0 +1,217 @@
+// Common
+Notification.DefaultTitle = "Notification";
+Dialog.MayBeTomorrow = "May be tomorrow";
+Friend = "Friend";
+Cancel = "Avbryt";
+Done = "Ferdig";
+Yes = "Ja";
+No = "Nei";
+Skip = "Neste";
+Logout = "Logg ut";
+Retry = "Prøv igjen";
+Keypad.Done = "Ferdig";
+Save = "Lagre";
+Post = "Post";
+Private = "Private";
+Public = "Public";
+UnfollowAlert = "Sikker på du vil stoppe å følge '%@'?";
+
+// Common Error
+Failure = "Feil";
+Error.Unexpected = "Det skjedde en feil. Prøv igjen senere.";
+Error.NoNetworkTitle = "Nettverksfeil";
+Error.NoNetworkTip = "Sjekk at du har internet og prøv igjen.";
+
+// Sidebar Menu
+Sidebar.LogoutAlert = "Sikker på du vil logge ut av PushBud?";
+Sidebar.Friends = "Venner";
+Sidebar.Tags = "Mine tags";
+Sidebar.Events = "Mine events";
+Sidebar.Pictures = "Bilder i nærheten";
+Sidebar.EditProfile = "Rediger Profil";
+Sidebar.Settings = "Innstillinger";
+
+// Date & Time
+Date.JustNow = "Nylig";
+Date.MinutesAgo = "%d min siden";
+Date.HourAgo = "en time siden";
+Date.HoursAgo = "%d timer siden";
+Date.YesterdayAt = "'I går 'h:mm a";
+Date.ThisYearAt = "MMM d' kl 'h:mm a";
+Date.PastYearAt = "MMM d', 'yyyy' kl 'h:mm a";
+
+// LoginViewController
+Authentication.LoginTitle = "LOGG INN";
+Authentication.LoginButton = "Logg inn";
+Authentication.SignupTitle = "OPPRETT KONTO";
+Authentication.SignupButton = "Opprett konto";
+Authentication.Username = "Brukernavn";
+Authentication.Password = "Passord";
+Authentication.RepeatPassword = "Bekreft passord";
+Authentication.LoginSeparatorTip = "Eller logg inn med en Pushbud account";
+Authentication.SignupSeparatorTip = "Lag ny konto med epost";
+
+// LoginValidation
+Error.UsernameEmpty = "Brukernavn er påkrevd";
+Error.UsernameInvalid = "Ugyldig brukernavn";
+Error.UsernameTooShort = "Brukernavn må være minst 4 tegn";
+Error.UsernameInvalidCharacter = "Kun a-z 0-9 eller symboler .-_ er tillatt i brukernavnet";
+Error.PasswordEmpty = "Ingen passord er skrevet inn";
+Error.PasswordTooShort = "Passordet er for kort og må bestå av minimum 4 tegn";
+Error.PasswordMismatch = "Passordene stemmer ikke med hverandre";
+Error.LoginFailedTitle = "Kunne ikke logge inn";
+Error.LoginFailedTip = "Sjekk at brukernavn og passord er riktig og prov igjen";
+Error.SignupFailedTitle = "Kunne ikke registrere bruker";
+Error.SignupFailedTip = "Det skjedde en feil. Prøv igjen";
+
+// MapViewController
+Map.EmptyTip = "No events within map area\nHey, but checkout these popular tags!";
+Map.UserLocationUnavailableMessage = "To show and follow your location, it is required that location services is turned on in Settings → Privacy → Location Services\nAlso make sure PushBud is authorized to use your location.";
+
+LocationServices.Disabled.Title = "Hvor er du?";
+LocationServices.Disabled.Tip = "PushBud trenger din lokasjon for å vite hva vi skal vise deg.";
+LocationServices.Disabled.Button = "Aktiver lokasjon tjeneste";
+
+LocationServices.Unauthorized.Title = "Hvor er du?";
+LocationServices.Unauthorized.Tip = "Gi tilgang til stedstjeneste for PushBud.";
+LocationServices.Unauthorized.Button = "Gi tilgang";
+
+LocationServices.Disabled.Toast.Title = "Stedtjeneste";
+LocationServices.Disabled.Toast.Tip = "PushBud trenger stedstjeneste aktivert.\nGå inn på Innstilling → Personvern → Stedtjenester og aktiver den.";
+
+LocationServices.Unauthorized.Toast.Title = "Stedtjeneste";
+LocationServices.Unauthorized.Toast.Tip = "PushBud requires to be authorized to use your location.\nGo to Settings → PushBud → Location and select \"Always\".";
+
+// TrackingViewController
+Tracking.PushInRadius = "Notify me when in radius";
+Tracking.ExpiryTitle = "Track Until";
+Tracking.ExpiresOnIntersect = "Invalidates on Intersection";
+Tracking.RequestTitle = "Tracking Request";
+Tracking.Request = "Request Tracking Permission";
+
+Tracking.Expiry.End = "Expired";
+Tracking.Expiry.Second = "%01ds left";
+Tracking.Expiry.Minute = "%01dm left";
+Tracking.Expiry.Hours = "%01dh left";
+Tracking.Expiry.Day = "%01dd left";
+Tracking.Expiry.DayHours = "%1$dd %2$dh left";
+
+Tracking.Decline = "Are you sure want to decline the tracking request?";
+Tracking.Remove = "Are you sure want to remove?";
+Tracking.Delete = "Delete";
+Tracking.View = "View";
+
+TrackingStatus.Active = "Active";
+TrackingStatus.Awaiting = "Awaiting";
+TrackingStatus.Invitation = "Invitation";
+
+// UserViewController
+User.Invite = "Følg";
+User.Invited = "Invited";
+User.Following = "Følger";
+
+User.PostsTitle = "POSTS";
+User.TagsTitle = "TAGS";
+User.FriendsTitle = "FRIENDS";
+
+// FeedsViewController
+Feed.EmptyTip = "No events, but check the tags below";
+Feed.EmptyButtonTitle = "Search for Friends";
+
+Feed.Report = "Rapport mottatt.";
+Feed.UnReport = "Fjern din rapportering.";
+
+Feed.FilterMap = "MAP";
+Feed.FilterNearby = "NEAR BY";
+Feed.FilterGlobal = "GLOBAL";
+Feed.FilterThisWeekend = "THIS WEEKEND";
+Feed.FilterFriends = "FRIENDS";
+Feed.FilterOwnEvents = "MINE EVENTS";
+
+// CommentsViewController
+Comments.Placeholder = "Din kommentar...";
+Comments.EmptyTip = "Vær den første til å kommentere.";
+
+// FriendshipMenu
+Friendship.Profile = "View Profile";
+Friendship.Settings = "Push Settings";
+Friendship.Delete = "Delete";
+Friendship.Tracking = "Tracking";
+Friendship.StopNotification = "Disable";
+
+// FriendsViewController
+Friends.SearchPlaceholder = "Søk etter venner...";
+Friends.Radius = "Radius (%dkm)";
+
+CHANGE_RADIUS_ERROR_TITLE = "Kan ikke lagre ny radius";
+CHANGE_RADIUS_ERROR = "En feil skjedde når vi skulle oppdatere din radius. Prøv igjen om litt.";
+
+CHANGE_MUTE_ERROR_TITLE = "Kunne ikke endre lyd";
+CHANGE_MUTE_ERROR = "Kunne ikke endre lyd-innstillinger på gruppe. Prøv igjen senere";
+
+// TagsViewController
+Tags.SearchPlaceholder = "Søk etter tags...";
+
+// Editor
+Editor.Title = "Detaljer";
+Editor.Location = "Lokasjon";
+Editor.Tags = "Tags";
+Editor.SlugPlaceholder = "Bildetekst";
+Editor.MapLocationTip = "Trykk og hold for å flytte markør.\nPress lenge for å kjapt flytte markør";
+Editor.WaitWhileSaving = "Lagrer eventet ditt.";
+Editor.VisibilityTitle = "Synlighet";
+EditorMap.SearchPlaceholder = "Søk plasser i nærheten...";
+
+// EditorViewController errors
+Error.EventCreateFailTitle = "Feil";
+Error.EventCreateFailTip = "Feil på server og kan ikke lagre ditt event.";
+Error.PhotoUploadFailed = "Kunne ikke laste opp bildet. Vennligst prøv igjen senere";
+
+// Profile
+Profile.Own.Title = "Min profil";
+Profile.Save = "Lagre endringer";
+Profile.AcceptInvitation = "Aksepter invitasjon";
+Profile.CameraPhoto = "Ta ett bilde";
+Profile.LibraryPhoto = "Bibliotek";
+Profile.RemovePhoto = "Fjern profil bildet";
+Profile.NamePlaceholder = "Navn";
+Profile.EmailPlaceholder = "Email";
+Profile.ImageUploadError = "Det skjedde en feil ved opplasting av bildet";
+
+Profile.Visibility = "Profilens synlighet";
+Profile.VisibilityPrivate = "Profilen kan kun sees av venner.";
+Profile.VisibilityPublic = "Profilen er synlig for alle.";
+
+// Passwowrd
+ChangePassword.Title = "Bytt passord";
+ChangePassword.CurrentPasswordTitle = "Nåværende passord";
+ChangePassword.NewPasswordTitle = "Nytt passord";
+ChangePassword.RepeatPasswordTitle = "Gjenta passord";
+ChangePassword.ShowPassword = "Vis passord";
+ChangePassword.HidePassword = "Skjul passord";
+
+// NotifyViewController
+Nofity.EmptyTip = "You are all caught up!";
+
+// API Errors
+APIError.LoginExist = "Brukernavn \"%@\" er opptatt, velg ett annet";
+
+
+// Push localization keys.
+FRXT = "Venneforespørsel";
+FRXB = "%@ vil bli venn med deg!";
+FRAT = "Aksepterte";
+FRAB = "%@ aksepterte din venneforespørsel";
+NET  = "%@ har publisert noe nytt"; // New event title
+NEB  = "%@"; // The new event body
+TRXT = "Sporings forespørsel";
+TRXB = "%@ har spurt om tilgang til din posisjon";
+TRAT = "Posisjonsporing godkjent";
+TRAB = "%@ aksepterte din sporings forespørsel";
+TRIT = "%@ er i nærheten";
+TRIB = "%@ er under %@m unna deg!";
+TRDT = "Posisjonsporing ikke godkjent";
+TRDB = "%@ godkjente ikke din sporings forespørsel";
+
+NCT = "%@ kommenterte ditt event";
+NCB = "%@";

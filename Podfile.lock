@@ -1,0 +1,74 @@
+PODS:
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - EFCircularSlider (0.2.0)
+  - Fabric (1.6.11)
+  - GoogleMaps (2.3.0):
+    - GoogleMaps/Maps (= 2.3.0)
+  - GoogleMaps/Base (2.3.0)
+  - GoogleMaps/Maps (2.3.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.3.0):
+    - GoogleMaps/Base (= 2.3.0)
+  - KSCrash/Core (1.15.12):
+    - KSCrash/Reporting/Filters/Basic
+  - KSCrash/Recording (1.15.12):
+    - KSCrash/Recording/Tools (= 1.15.12)
+  - KSCrash/Recording/Tools (1.15.12)
+  - KSCrash/Reporting/Filters/Base (1.15.12):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Filters/Basic (1.15.12):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - LNRSimpleNotifications (0.6.1)
+  - ObjectMapper (2.2.7)
+  - Sentry/Core (3.8.3)
+  - Sentry/KSCrash (3.8.3):
+    - KSCrash/Core (~> 1.15.12)
+  - Smile (1.2.0)
+  - SVPullToRefresh (0.4.1)
+
+DEPENDENCIES:
+  - Crashlytics
+  - EFCircularSlider
+  - Fabric
+  - GoogleMaps
+  - GooglePlaces
+  - LNRSimpleNotifications (from `https://github.com/LISNR/LNRSimpleNotifications.git`)
+  - ObjectMapper
+  - Sentry/Core (from `https://github.com/getsentry/sentry-cocoa.git`, tag `3.8.3`)
+  - Sentry/KSCrash (from `https://github.com/getsentry/sentry-cocoa.git`, tag `3.8.3`)
+  - Smile
+  - SVPullToRefresh (= 0.4.1)
+
+EXTERNAL SOURCES:
+  LNRSimpleNotifications:
+    :git: https://github.com/LISNR/LNRSimpleNotifications.git
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 3.8.3
+
+CHECKOUT OPTIONS:
+  LNRSimpleNotifications:
+    :commit: 4578f2122c9e22dd505932246b1388d8c3e7bc56
+    :git: https://github.com/LISNR/LNRSimpleNotifications.git
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 3.8.3
+
+SPEC CHECKSUMS:
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  EFCircularSlider: 3af1dd6f86eb3eeeeaab0345ef3d6d1c2fc93d17
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
+  GooglePlaces: 74d322c74184ea4576184089b496d291cf0dcd38
+  KSCrash: 931b6caeebfbfe0d316007fcd209f6cb9889c624
+  LNRSimpleNotifications: ea438d3315942594c9f20fd79cf3c242139b5d60
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  Sentry: 0f2986f8ae88ce2134b5e1ef85998ef8b4f066b6
+  Smile: ea3f901a24a0ef72b2f6d02451bf369d4f135b16
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+
+PODFILE CHECKSUM: f5a748cb5e4c0451fba3fa70415ccf39b44a2fce
+
+COCOAPODS: 1.4.0

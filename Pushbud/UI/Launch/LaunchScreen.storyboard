@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-FX-XfV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_big" translatesAutoresizingMaskIntoConstraints="NO" id="2Kg-mS-vPX">
+                                <rect key="frame" x="20.5" y="82" width="279" height="313"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zfY-FX-XfV" secondAttribute="trailing" id="2UN-dm-tQD"/>
+                            <constraint firstItem="zfY-FX-XfV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6d2-j2-cQe"/>
+                            <constraint firstItem="zfY-FX-XfV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9DB-1C-D2A"/>
+                            <constraint firstItem="2Kg-mS-vPX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="62" id="Top-W4-tik"/>
+                            <constraint firstItem="zfY-FX-XfV" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="o0s-21-Edb"/>
+                            <constraint firstItem="zfY-FX-XfV" firstAttribute="centerX" secondItem="2Kg-mS-vPX" secondAttribute="centerX" id="u3h-eh-8e9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlurBackground" width="320" height="568"/>
+        <image name="logo_big" width="279" height="313"/>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" rowHeight="57" id="eHR-6W-exf" customClass="TrackingTableViewCell" customModule="Pushbud" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHR-6W-exf" id="R5g-y0-CvZ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlL-rd-4W8">
+                        <rect key="frame" x="16" y="0.0" width="86" height="53.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGD-fR-S0T">
+                                <rect key="frame" x="52" y="9" width="34" height="36.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zig-Yl-usF">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="20"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-7u-7Go" customClass="LabelInset" customModule="Pushbud" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21" width="27" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zig-Yl-usF" firstAttribute="top" secondItem="VGD-fR-S0T" secondAttribute="top" id="N5P-9E-TSj"/>
+                                    <constraint firstItem="2Ih-7u-7Go" firstAttribute="leading" secondItem="VGD-fR-S0T" secondAttribute="leading" id="NRR-Pz-hAq"/>
+                                    <constraint firstItem="Zig-Yl-usF" firstAttribute="leading" secondItem="VGD-fR-S0T" secondAttribute="leading" id="Qgg-kL-d4w"/>
+                                    <constraint firstItem="2Ih-7u-7Go" firstAttribute="top" secondItem="Zig-Yl-usF" secondAttribute="bottom" constant="1" id="aDB-Ag-DFN"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Ih-7u-7Go" secondAttribute="bottom" id="fX3-BV-bpa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zig-Yl-usF" secondAttribute="trailing" id="kIL-w3-jre"/>
+                                </constraints>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqo-Ey-8Sb" customClass="AvatarImageView" customModule="Pushbud" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="4" width="46" height="46"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.36862745099999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="9Bd-qc-ZkH"/>
+                                    <constraint firstAttribute="width" constant="46" id="LAu-9H-kYD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="targetSize">
+                                        <integer key="value" value="46"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VGD-fR-S0T" secondAttribute="trailing" id="AEk-yb-otd"/>
+                            <constraint firstItem="VGD-fR-S0T" firstAttribute="centerY" secondItem="dlL-rd-4W8" secondAttribute="centerY" id="UGB-dG-5rq"/>
+                            <constraint firstItem="jqo-Ey-8Sb" firstAttribute="leading" secondItem="dlL-rd-4W8" secondAttribute="leading" id="Vgk-ki-9lu"/>
+                            <constraint firstItem="jqo-Ey-8Sb" firstAttribute="centerY" secondItem="dlL-rd-4W8" secondAttribute="centerY" id="xN5-zO-bBp"/>
+                            <constraint firstItem="VGD-fR-S0T" firstAttribute="leading" secondItem="jqo-Ey-8Sb" secondAttribute="trailing" constant="6" id="xqQ-zB-veT"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZK-WR-3r7">
+                        <rect key="frame" x="248" y="10" width="56" height="32"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                        <inset key="contentEdgeInsets" minX="12" minY="6" maxX="0.0" maxY="6"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iZK-WR-3r7" firstAttribute="trailing" secondItem="R5g-y0-CvZ" secondAttribute="trailingMargin" id="69q-UG-Ym7"/>
+                    <constraint firstItem="iZK-WR-3r7" firstAttribute="centerY" secondItem="R5g-y0-CvZ" secondAttribute="centerY" id="COK-Ba-MB5"/>
+                    <constraint firstAttribute="bottom" secondItem="dlL-rd-4W8" secondAttribute="bottom" id="LzK-MT-jwx"/>
+                    <constraint firstItem="dlL-rd-4W8" firstAttribute="leading" secondItem="R5g-y0-CvZ" secondAttribute="leadingMargin" id="SEp-Xr-kVU"/>
+                    <constraint firstItem="dlL-rd-4W8" firstAttribute="top" secondItem="R5g-y0-CvZ" secondAttribute="top" id="Xv3-3K-vX9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="btnMenu" destination="iZK-WR-3r7" id="H0j-2Y-bNh"/>
+                <outlet property="imgUser" destination="jqo-Ey-8Sb" id="CJb-rc-Yz2"/>
+                <outlet property="lblStatus" destination="2Ih-7u-7Go" id="cQl-jJ-Cyo"/>
+                <outlet property="lblUser" destination="Zig-Yl-usF" id="bfp-P9-WEI"/>
+            </connections>
+            <point key="canvasLocation" x="-120" y="-7.5"/>
+        </tableViewCell>
+    </objects>
+</document>

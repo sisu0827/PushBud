@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" rowHeight="80" id="eHR-6W-exf" customClass="CommentsTableViewCell" customModule="Pushbud" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHR-6W-exf" id="R5g-y0-CvZ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqo-Ey-8Sb" customClass="AvatarImageView" customModule="Pushbud" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="36" height="36"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.36862745099999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="targetSize">
+                                <integer key="value" value="46"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zig-Yl-usF">
+                        <rect key="frame" x="60" y="8" width="252" height="42.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                        <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dih-rM-CiQ">
+                        <rect key="frame" x="60" y="53.5" width="32" height="18"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zig-Yl-usF" firstAttribute="leading" secondItem="R5g-y0-CvZ" secondAttribute="leadingMargin" constant="52" id="Phg-9j-IDD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Zig-Yl-usF" secondAttribute="trailing" id="QYk-qn-BbO"/>
+                    <constraint firstItem="Zig-Yl-usF" firstAttribute="top" secondItem="R5g-y0-CvZ" secondAttribute="topMargin" id="Tgj-Uk-P2b"/>
+                    <constraint firstItem="dih-rM-CiQ" firstAttribute="leading" secondItem="R5g-y0-CvZ" secondAttribute="leadingMargin" constant="52" id="erj-tj-dn3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Zig-Yl-usF" secondAttribute="bottom" constant="18" id="jdz-gu-HEn"/>
+                    <constraint firstItem="dih-rM-CiQ" firstAttribute="top" secondItem="Zig-Yl-usF" secondAttribute="bottom" constant="3" id="n96-4i-ofS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="imgUser" destination="jqo-Ey-8Sb" id="T17-AV-U6f"/>
+                <outlet property="lblDate" destination="dih-rM-CiQ" id="4Iq-L3-MUj"/>
+                <outlet property="lblText" destination="Zig-Yl-usF" id="8Q3-Om-6yw"/>
+            </connections>
+            <point key="canvasLocation" x="-122" y="-14.5"/>
+        </tableViewCell>
+    </objects>
+</document>

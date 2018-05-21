@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APIURL</key>
+	<string>https://prod.pushbud.no/api/</string>
+	<key>OneSignalAppID</key>
+	<string>9f1dcf83-3a8f-4809-8218-0f92af87b767</string>
+	<key>CloudinaryURIFormat</key>
+	<string>cloudinary://234994698487394:3oPX1N0YMY2J_RosMb1zelHnZ2g@mequire</string>
+	<key>MixpanelAPIKey</key>
+	<string>ebd9c13139cfdca4ec43b4ad86c19f41</string>
+	<key>MixpanelAPIToken</key>
+	<string>438ecd7a2307aba66b320b2b5f3be1e8</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  eSmart
+
+  Created by Daria.R on 11/3/16.
+  Copyright © 2017 Martoff. All rights reserved.
+*/
+
+NSCameraUsageDescription = "Enable Camera access to take a photo of whats happening in the event.";
+NSMotionUsageDescription = "Using motion to better asses position and provide accurate push for events.";
+NSPhotoLibraryUsageDescription = "Use your photos to show what's happening in the event";
+NSPhotoLibraryAddUsageDescription = "Use your photos to show what's happening in the event";
+
+NSLocationAlwaysUsageDescription = "Your location will be shown on the map and your map usage will anonymously improve the map.";
+NSLocationWhenInUseUsageDescription = "Your location will be shown on the map and your map usage will anonymously improve the map.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "Your location will be shown on the map and your map usage will anonymously improve the map.";
