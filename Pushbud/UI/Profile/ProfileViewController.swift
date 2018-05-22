@@ -93,16 +93,19 @@ class ProfileViewController: UIViewController {
     
     // MARK:- Actions
     func closeAction() {
+        print("close button click")
         self.navigationController?.popViewController(animated: true)
     }
     
     func editAccount() {
+        print("edit account")
         let accountVC = AccountViewController()
         accountVC.profile = Config.userProfile
         self.navigationController?.pushViewController(accountVC, animated: true)
     }
     
     func friendMenu() {
+        print("friend menu!")
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alert.view.tintColor = Theme.Dark.textColor
         alert.addAction(UIAlertAction(title: LocStr("Friendship.Delete"), style: .destructive, handler: {_ in
@@ -117,6 +120,21 @@ class ProfileViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func postEventAction() {
+        print("post click")
+        self.eventsAction()
+//        self.navigationController?.pushViewController(FeedsViewController(dataSource: nil, filter: .own, index: nil), animated: true)
+    }
+    
+    func friendEventAction() {
+        print("friend click")
+        print(self.user)
+//        self.navigationController?.pushViewController(FriendsTableViewController(), animated: true)
+        let vc : FriendsTableViewController = FriendsTableViewController()
+        vc.userInfo = self.user
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tagAction(_ sender: UIView) {
         guard let index = self.tags?.index(where: { $0.id == sender.tag }) else { return }
 
@@ -125,6 +143,7 @@ class ProfileViewController: UIViewController {
     }
     
     func inviteAction() {
+        print("invite button click")
         self.userSet(invitation: false, invite: true)
     }
     
@@ -236,14 +255,14 @@ class ProfileViewController: UIViewController {
     }
     
     private func loadPopularTags() {
-        TagManager.getPopularTags(withLimit: 8) { [weak self] result in
-            switch result {
-            case .Success(let tags):
-                self?.tags = tags
-            case .Failure:
-                self?.tags = self?.tags ?? []
-            }
-        }
+//        TagManager.getPopularTags(withLimit: 8) { [weak self] result in
+//            switch result {
+//            case .Success(let tags):
+//                self?.tags = tags
+//            case .Failure:
+//                self?.tags = self?.tags ?? []
+//            }
+//        }
     }
 
     private func setupBaseUI() {
@@ -262,7 +281,7 @@ class ProfileViewController: UIViewController {
         let yPos = imageSize + 48.0
         let progressView = UIView(frame: CGRect(x: 0, y: yPos, width: Constants.screenSize.width, height: self.view.frame.height - yPos))
         progressView.tag = self.busyTag
-        self.view.addSubview(progressView)
+//        self.view.addSubview(progressView)
         Helper.addProgress(in: progressView, style: .gray)
         
         self.loadData()
@@ -271,13 +290,27 @@ class ProfileViewController: UIViewController {
     private func setupTagsUI() {
         self.view.viewWithTag(busyTag)?.removeFromSuperview()
         
+        /*lgc begin*/
+        
+//        let postSubView = UIView()
+//        postSubView.translatesAutoresizingMaskIntoConstraints = false
+//        self.contentView.addSubview(postSubView)
+//        //Helper.addConstraints(["H:|-\(Int(margin))-[tv]-0-|", "V:[tv(\(Int(height)))]-0-|"], source: self.contentView, views: ["tv": postSubView])
+//        self.contentView.addConstraint(NSLayoutConstraint(item: postSubView, attribute: .top, relatedBy: .equal, toItem: statsView, attribute: .bottom, multiplier: 1.0, constant: 24.0))
+//        print("post view displayFlag")
+        //return
+        
+        /*lgc end*/
+        //lgc omission
+        
+        
         guard let tags = self.tags, !tags.isEmpty else { return }
 
         let tagsView = UIView()
         tagsView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(tagsView)
 
-//        let messageText = LocStr("User.NotFollowingTags") + "\n"
+        //let messageText = LocStr("User.NotFollowingTags") + "\n"
         
         let margin: CGFloat = 24.0
         let maxWidth = Constants.screenSize.width - (margin * 2)
@@ -293,7 +326,7 @@ class ProfileViewController: UIViewController {
         for tag in tags {
             let button = UIButton()
             button.addTarget(self, action: #selector(tagAction(_:)), for: .touchUpInside)
-            button.backgroundColor = UIColor(red: 0.945098, green: 0.945098, blue: 0.945098, alpha: 1.0) // F1F1F1
+            button.backgroundColor = UIColor(red: 0.945098, green: 0.945098, blue: 0.945098, alpha: 1.0) //F1F1F1
             button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
             button.setTitle("#" + tag.name, for: .normal)
             button.setTitleColor(Theme.Dark.textColor, for: .normal)
@@ -323,7 +356,7 @@ class ProfileViewController: UIViewController {
                 nextOrigin.x += nextX
                 availableWidth -= nextX
             }
-            
+         
             lastY = button.frame.origin.y
             tagsView.addSubview(button)
         }
@@ -332,6 +365,7 @@ class ProfileViewController: UIViewController {
         Helper.addConstraints(["H:|-\(Int(margin))-[tv]-0-|", "V:[tv(\(Int(height)))]-0-|"], source: self.contentView, views: ["tv": tagsView])
         
         self.contentView.addConstraint(NSLayoutConstraint(item: tagsView, attribute: .top, relatedBy: .equal, toItem: statsView, attribute: .bottom, multiplier: 1.0, constant: margin))
+        
     }
     
     private func setupUI(postsCount: Int, tagsCount: Int, friendsCount: Int) {
@@ -344,14 +378,14 @@ class ProfileViewController: UIViewController {
         self.statsView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(statsView)
         Helper.addConstraints(["H:|-0-[sv]-0-|", "V:[sv(64)]"], source: contentView, views: ["sv": statsView])
-
+        /*lgc fix*/
         let labels: [(label: String, count: Int)] = [
             ("User.PostsTitle", postsCount),
-            ("User.TagsTitle", tagsCount),
+            //("User.TagsTitle", tagsCount),
             ("User.FriendsTitle", friendsCount)
         ]
-
-        for i in 0...2 {
+        /*lgc fix*/
+        for i in 0...1 {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .center
@@ -361,24 +395,35 @@ class ProfileViewController: UIViewController {
             let chars = count.characters.count
             let attrStr = NSMutableAttributedString(string: count + "\n" + LocStr(labels[i].label), attributes: [
                 NSFontAttributeName: Theme.Font.medium.withSize(18),
-                NSForegroundColorAttributeName: i == 1 ? UIColor.gray : UIColor.lightGray])
+                NSForegroundColorAttributeName: UIColor.lightGray])
+            //lgc omission
+//                NSForegroundColorAttributeName: i == 1 ? UIColor.gray : UIColor.lightGray])
             attrStr.addAttributes([
                 NSFontAttributeName: Theme.Font.bold.withSize(18),
                 NSForegroundColorAttributeName: Theme.Dark.textColor], range: NSRange(location: 0, length: chars))
             attrStr.addAttribute(NSFontAttributeName, value: Theme.Font.light.withSize(8), range: NSRange(location: chars, length: 1))
             label.attributedText = attrStr
             
-            guard (i != 1) else {
-                statsView.addSubview(label)
-                statsView.addConstraints([
-                    NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: statsView, attribute: .centerX, multiplier: 1.0, constant: 0),
-                    NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: statsView, attribute: .centerY, multiplier: 1.0, constant: 0)])
-                continue
-            }
+            /* lgc omission begin */
+            
+//            guard (i != 1) else {
+//                statsView.addSubview(label)
+//                statsView.addConstraints([
+//                    NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: statsView, attribute: .centerX, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: statsView, attribute: .centerY, multiplier: 1.0, constant: 0)])
+//               continue
+//            }
+            
+            /* lgc omission end */
 
             let view = UIView()
-            if (i == 0 && self.user.isFriend) {
-                view.addTarget(target: self, action: #selector(eventsAction))
+//            if (i == 0 && self.user.isFriend) {
+            if (i == 0) {
+//                view.addTarget(target: self, action: #selector(eventsAction))
+                view.addTarget(target: self, action: #selector(postEventAction))
+            }
+            if (i == 1){
+                view.addTarget(target: self, action: #selector(friendEventAction))
             }
             view.backgroundColor = .white
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -388,7 +433,7 @@ class ProfileViewController: UIViewController {
             statsView.addConstraints([
                 NSLayoutConstraint(item: view, attribute: attrib, relatedBy: .equal, toItem: statsView, attribute: attrib, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: statsView, attribute: .top, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: statsView, attribute: .width, multiplier: 0.33, constant: 0),
+                NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: statsView, attribute: .width, multiplier: 0.5, constant: 0),
                 NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: statsView, attribute: .bottom, multiplier: 1.0, constant: -1.0)])
 
             view.addSubview(label)
