@@ -634,8 +634,12 @@ class MapViewController: UIViewController, CircleTransitionType {
     
     fileprivate func loadEvents() {
         guard let positon = self.mapView?.camera.target else { return }
+//        print(positon)
+//        print("sdf")
         
         let params = GMSCoordinateBounds(region: self.mapView!.projection.visibleRegion()).toParams
+        
+//        print(params)
         
         if let lastParams = self.lastFetchedUri, params == lastParams {
             return
@@ -723,16 +727,16 @@ class MapViewController: UIViewController, CircleTransitionType {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         TagManager.getPopularTags(withLimit: 8) { [weak self] result in
-            
+
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            
+
             switch result {
             case .Success(let tags):
                 self?.popularTags = tags
             case .Failure:
                 break;
             }
-            
+
         }
     }
     

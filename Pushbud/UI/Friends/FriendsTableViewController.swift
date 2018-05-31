@@ -34,6 +34,8 @@ class FriendsTableViewController: UITableViewController {
         case unfollow = 1, retryLoadData
     }
     
+    var userInfo : UserExtended?
+    
     private let searchBar = UISearchBar()
     fileprivate var searchTimer: Timer?
     fileprivate var lastSearch = ""
@@ -233,6 +235,7 @@ class FriendsTableViewController: UITableViewController {
         }
     }
     
+    
     func loadData() {
         var uri: String!
         let isSearch = self.isSearching
@@ -245,7 +248,10 @@ class FriendsTableViewController: UITableViewController {
             uri = "friends"
             LoaderOverlay.shared.show()
         }
-        
+//        print("headerInfo")
+//        print(APIClient.Headers)
+//        print("userInfo32432142134123521352135userInfo")
+//        print(self.userInfo)
         HTTP.New(APIClient.baseURL + uri, type: .GET, headers: APIClient.Headers).start { [weak self] response in
             
             LoaderOverlay.shared.hide()

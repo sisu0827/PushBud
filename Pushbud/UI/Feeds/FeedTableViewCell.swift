@@ -36,8 +36,14 @@ class FeedTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet var btnComment: UIButton!
     @IBOutlet var btnLike: UIButton!
     @IBOutlet var btnReport: UIButton!
-
+    @IBAction func onGoMapLoc(_ sender: UIButton) {
+        print("map button click")
+        self.feedsVC?.showMapView()
+    }
+    
     private let btnMenu = UIButton()
+    
+    var btnMapPin = UIButton()
     
     var feedsVC: FeedsViewController? {
         let navVC = (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UINavigationController
@@ -74,6 +80,18 @@ class FeedTableViewCell: UITableViewCell, UITextViewDelegate {
         self.userView.addConstraints([
             NSLayoutConstraint(item: userView, attribute: .trailing, relatedBy: .equal, toItem: btnMenu, attribute: .trailing, multiplier: 1.0, constant: 8.0),
             NSLayoutConstraint(item: btnMenu, attribute: .centerY, relatedBy: .equal, toItem: userView, attribute: .centerY, multiplier: 1.0, constant: 0)
+        ])
+        
+        // map pin button add
+        btnMapPin.setImage(#imageLiteral(resourceName: "feed_map_icon2"), for: .normal)
+        btnMapPin.contentEdgeInsets = UIEdgeInsetsMake(5, 8, 5, 8)
+        btnMapPin.translatesAutoresizingMaskIntoConstraints = false
+        self.userView.addSubview(btnMapPin)
+        self.userView.addConstraints([
+            NSLayoutConstraint(item: userView, attribute: .trailing, relatedBy: .equal, toItem: btnMapPin, attribute: .trailing, multiplier: 1.0, constant: 8.0),
+            NSLayoutConstraint(item: btnMapPin, attribute: .centerY, relatedBy: .equal, toItem: userView, attribute: .centerY, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: btnMapPin, attribute: .leftMargin, relatedBy: .equal, toItem: userView, attribute: .leadingMargin, multiplier: 1.0, constant: 10.0),
+//            NSLayoutConstraint(item: btnMapPin, attribute: .rightMargin, relatedBy: .equal, toItem: userView, attribute: .leadingMargin, multiplier: 1.0, constant: 10.0)
         ])
         
         let _colorOverlay = UIView()

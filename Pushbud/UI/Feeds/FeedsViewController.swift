@@ -208,6 +208,10 @@ class FeedsViewController: UIViewController, CircleTransitionType {
         self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
+    func showMapView() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func backAction() {
         guard (!self.filterTag.isEmpty) else {
             self.navigationController?.popViewController(animated: true)
@@ -725,8 +729,25 @@ extension FeedsViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.setData(feed, text: attrStr ?? NSAttributedString(string: feed.text, attributes: attribs))
         cell.userView.tag = indexPath.section + 1
-
+        cell.btnMapPin.tag = indexPath.section
+        cell.btnMapPin.addTarget(self, action: #selector(onMapPinClicked(sender:)), for: .touchUpInside)
         return cell
+    }
+
+    @objc func onMapPinClicked(sender:UIButton) {
+        print(sender.tag)
+//        let index = items.index(where: { $0.id == sender.tag }) else { return }
+//        let index = 3
+//        if let index = self.items?.index(where: { $0.user.id == userId }) {
+////            self.items!.
+////            (at: index)
+//        }
+        var feed = self.item(at: sender.tag)
+        
+//        var post_array = self.items!
+        
+        print(feed?.longitude)
+        print(feed?.latitude)
     }
 
     private func loadPopularTags() {
